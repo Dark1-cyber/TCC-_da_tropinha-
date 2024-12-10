@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body class="dieta">
+    <h1>Calculadora de Dieta</h1>
+    <label for="food">Selecione um alimento:</label>
+   
+    <select id="food">
+       
+      <!-- Cereais -->
+        <option value="arroz,130">Arroz - 130 kcal (100g)</option>
+        <option value="aveia,389">Aveia - 389 kcal (100g)</option>
+        <option value="pão,250">Pão - 250 kcal (100g)</option>
+
+        <!-- Leguminosas -->
+        <option value="feijao,90">Feijão - 90 kcal (100g)</option>
+        <option value="lentilha,116">Lentilha - 116 kcal (100g)</option>
+        <option value="grão-de-bico,164">Grão-de-bico - 164 kcal (100g)</option>
+
+        <!-- Carnes -->
+        <option value="frango,165">Frango - 165 kcal (100g)</option>
+        <option value="carne-bovina,250">Carne bovina - 250 kcal (100g)</option>
+        <option value="peixe,206">Peixe - 206 kcal (100g)</option>
+
+        <!-- Frutas -->
+        <option value="banana,89">Banana - 89 kcal (100g)</option>
+        <option value="maça,52">Maçã - 52 kcal (100g)</option>
+        <option value="laranja,47">Laranja - 47 kcal (100g)</option>
+        <option value="morango,32">Morango - 32 kcal (100g)</option>
+        <option value="abacate,160">Abacate - 160 kcal (100g)</option>
+
+        <!-- Vegetais -->
+        <option value="alface,14">Alface - 14 kcal (100g)</option>
+        <option value="brócolis,55">Brócolis - 55 kcal (100g)</option>
+        <option value="batata,77">Batata - 77 kcal (100g)</option>
+        <option value="cenoura,41">Cenoura - 41 kcal (100g)</option>
+        <option value="tomate,18">Tomate - 18 kcal (100g)</option>
+
+        <!-- Laticínios -->
+        <option value="leite,42">Leite - 42 kcal (100ml)</option>
+        <option value="queijo,402">Queijo - 402 kcal (100g)</option>
+        <option value="iogurte,63">Iogurte - 63 kcal (100g)</option>
+
+        <!-- Outros -->
+        <option value="ovos,143">Ovos - 143 kcal (100g)</option>
+        <option value="chocolate,546">Chocolate - 546 kcal (100g)</option>
+        <option value="azeite,884">Azeite - 884 kcal (100g)</option>
+        <option value="manteiga,717">Manteiga - 717 kcal (100g)</option>
+    </select>
+    <label for="quantity">Quantidade (em gramas):</label>
+    <input type="number" id="quantity" min="1" value="100">
+    <button onclick="addFood()">Adicionar</button>
+    <button onclick="clearDiet()">Limpar Dieta</button>
+
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Alimento</th>
+                <th>Quantidade (g)</th>
+                <th>Calorias</th>
+            </tr>
+        </thead>
+        <tbody id="food-list"></tbody>
+    </table>
+    <div class="total-calories" id="total-calories">Calorias totais: 0 kcal</div>
+
+<script src="script.js"></script>
+    
+</body>
+</html>

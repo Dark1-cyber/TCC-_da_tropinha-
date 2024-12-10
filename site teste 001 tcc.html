@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcule seu imc</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <ul class="nav nav-pills nav-fill">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="dieta.html">monte aqui a sua dieta</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">duvidas sob sua alimentaçao</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#">Desativado</a>
+        </li>
+      </ul> 
+
+    <div class="container">
+        <h1>Calculadora de IMC e Calorias</h1>
+
+        <!-- IMC Section -->
+        <section id="imc">
+            <h2>Calcule a seu imc</h2>
+            <input type="number" id="peso" placeholder="Peso (kg)" />
+            <input type="number" id="altura" placeholder="Altura (m)" />
+            <button onclick="calcularIMC()">Calcular IMC</button>
+            <p id="resultado-imc"></p>
+        </section>
+
+        <!-- TMB and Calorie Requirement Section -->
+        <section id="calorias">
+            <h2>Calcule suas Calorias Diárias</h2>
+            <input type="number" id="idade" placeholder="Idade (anos)" />
+            <select id="sexo">
+                <option value="masculino">Masculino</option>
+                <option value="feminino">Feminino</option>
+            </select>
+            <input type="number" id="peso-calorias" placeholder="Peso (kg)" />
+            <input type="number" id="altura-calorias" placeholder="Altura (cm)" />
+            <select id="nivel-atividade">
+                <option value="1.2">Sedentário (pouco ou nenhum exercício)</option>
+                <option value="1.375">Leve atividade (exercícios leves)</option>
+                <option value="1.55">Atividade moderada (exercícios moderados)</option>
+                <option value="1.725">Atividade intensa (exercícios pesados)</option>
+                <option value="1.9">Atividade extrema (atletas)</option>
+            </select>
+            <button onclick="calcularCalorias()">Calcular Calorias</button>
+            <p id="resultado-calorias"></p>
+         
+
+    <script src="script.js"></script>
+</body>
+</html>
